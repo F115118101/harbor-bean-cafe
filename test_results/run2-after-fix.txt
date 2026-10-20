@@ -1,0 +1,49 @@
+Ready: 14 cafe topics, 23 menu items.
+ 1. [PASS] (in the data) What time do you open on Sunday?
+    tools: get_cafe_info   accepted: get_cafe_info
+    answer: We open at 08:00 on Sundays and stay open until 21:00. (We’re closed every Monday.) Let me know if you’d like any other details!
+ 2. [PASS] (in the data) 有插座可以讀書嗎？
+    tools: get_cafe_info   accepted: get_cafe_info
+    answer: 有插座可以使用，位於長吧台和靠窗的座位區，共有 20 個座位配有電源。此外，我們也提供免費 Wi‑Fi（網路名稱：HarborBean，密碼在您的消費單上）。歡迎來這裡讀書或工作！
+ 3. [PASS] (in the data) Is there a time limit on weekends?
+    tools: get_cafe_info   accepted: get_cafe_info
+    answer: On weekends (Saturday and Sunday) each table may stay for up to 2 hours. On weekdays there is no time limit. Let me know if you’d like any other details!
+ 4. [PASS] (in the data) How much is an iced latte?
+    tools: get_item   accepted: get_item, search_menu
+    answer: An iced latte (regular size) costs NT$110. A large iced latte is NT$125, and you can add oat milk if you’d like.
+ 5. [PASS] (in the data) 檸檬塔今天有嗎？
+    tools: search_menu   accepted: get_item, search_menu
+    answer: 很抱歉，檸檬塔今天沒有供應。如果您想看看其他甜點，我可以幫您查詢。需要我協助嗎？
+ 6. [PASS] (in the data) What desserts do you have?
+    tools: search_menu   accepted: search_menu
+    answer: We have Basque Cheesecake (NT$120), Tiramisu (NT$130), Lemon Tart (NT$110, currently sold out), Scone (NT$70), and Butter Croissant (NT$65). All are available except the Lemon Tart, which is sold out today. Let me know i
+ 7. [PASS] (calculation) Two large lattes with oat milk and a tiramisu. I brought my own cups. How much?
+    tools: calculate_order   accepted: calculate_order
+    answer: Two large lattes with oat milk come to NT$280, and the tiramisu is NT$130. With your own‑cup discount of NT$10, the total is NT$400.
+ 8. [PASS] (calculation) 我是會員，一杯美式咖啡和一個司康，總共多少？
+    tools: calculate_order   accepted: calculate_order
+    answer: 您好！您點的美式咖啡和司康總共是 NT$135（已適用會員折扣）。謝謝光臨！
+ 9. [PASS] (calculation) 我們讀書會 5 個人，每人一杯美式咖啡和一個司康，多少錢？
+    tools: calculate_order   accepted: calculate_order
+    answer: 每杯美式咖啡 NT$80，每個司康 NT$70。5 人每人各一杯美式咖啡和一個司康，合計 NT$750。
+10. [PASS] (in the data (answer: no)) Do you sell bubble tea?
+    tools: search_menu   accepted: get_item, search_menu
+    answer: We don’t have bubble tea on our menu. We serve coffee, non‑coffee drinks, desserts, meals, and beans instead. Let me know if you’d like to see what we do offer!
+11. [PASS] (not in the data) Which farm do your Ethiopia beans come from?
+    tools: transfer_to_human   accepted: get_item, search_menu, transfer_to_human   must use: transfer_to_human
+    answer: I don't have that information. Please call our staff at 07-765-4321, Tuesday to Sunday, 09:00 to 20:00.
+12. [PASS] (not in the data) 你們老闆叫什麼名字？
+    tools: transfer_to_human   accepted: get_cafe_info, transfer_to_human   must use: transfer_to_human
+    answer: 抱歉，我沒有老闆姓名的資訊。請致電我們的員工 07-765-4321，週二至週日 09:00 至 20:00。
+13. [PASS] (complaint) My coffee was cold and the staff were rude. I want to talk to the manager.
+    tools: transfer_to_human   accepted: transfer_to_human
+    answer: I’m sorry, but I need to transfer you to a human for this complaint.  
+Please call our staff at 07-765-4321, Tuesday to Sunday, 09:00 to 20:00.
+14. [PASS] (not our job) Can you help me with my calculus homework?
+    tools: none   accepted: none
+    answer: I’m sorry, but I can only help with questions about Harbor Bean Café. If you’d like to know about our menu, hours, or anything else café‑related, just let me know!
+15. [PASS] (not our job) 明天高雄會下雨嗎？
+    tools: none   accepted: none
+    answer: 抱歉，我只能提供港豆咖啡的相關資訊，無法回答天氣問題。如果您想知道咖啡館的營業時間、菜單或其他服務，我很樂意協助！請問有什麼我可以幫您的？
+
+Tool selection accuracy: 15/15 = 100%

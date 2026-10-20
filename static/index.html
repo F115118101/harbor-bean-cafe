@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Harbor Bean Café 港豆咖啡 · Online Helper</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <header class="top">
+    <div class="brand">
+      <span class="logo">☕</span>
+      <div>
+        <h1>Harbor Bean Café <span class="zh">港豆咖啡</span></h1>
+        <p>Online helper · 線上客服 — answers come from our database through tools</p>
+      </div>
+    </div>
+    <button id="clear" class="ghost" type="button">Clear 清除</button>
+  </header>
+
+  <main class="layout">
+    <section class="chat-col">
+      <div id="chat" class="chat" aria-live="polite"></div>
+
+      <form id="ask" class="ask">
+        <input id="question" autocomplete="off" placeholder="Ask about hours, the menu, your bill or a booking…  用中文或英文問我">
+        <button id="send" type="submit">Send</button>
+      </form>
+
+      <div class="samples">
+        <div class="sample-head">
+          <strong>Sample questions 範例問題</strong>
+          <div class="tabs" role="tablist">
+            <button type="button" class="tab active" data-lang="en">English</button>
+            <button type="button" class="tab" data-lang="zh">中文</button>
+          </div>
+        </div>
+        <div id="sample-groups"></div>
+      </div>
+    </section>
+
+    <aside class="trace-col">
+      <h2>Tools used <span class="zh">工具軌跡</span></h2>
+      <p class="hint">Which tool the agent called, with what arguments, and what it got back.</p>
+      <div id="trace" class="trace"><p class="empty">(nothing yet)</p></div>
+    </aside>
+  </main>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

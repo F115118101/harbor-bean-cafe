@@ -1,0 +1,24 @@
+item_id,name,name_zh,category,price,large_extra,milk_based,available
+101,Americano,美式咖啡,coffee,80,15,0,1
+102,Latte,拿鐵,coffee,110,15,1,1
+103,Cappuccino,卡布奇諾,coffee,110,15,1,1
+104,Flat White,馥列白,coffee,120,0,1,1
+105,Caramel Macchiato,焦糖瑪奇朵,coffee,130,15,1,1
+106,Mocha,摩卡,coffee,130,15,1,1
+107,Cold Brew,冷萃咖啡,coffee,120,15,0,1
+108,Hand-drip Ethiopia Yirgacheffe,手沖衣索比亞耶加雪菲,coffee,160,0,0,1
+109,Hand-drip Colombia Huila,手沖哥倫比亞薇拉,coffee,150,0,0,0
+201,Matcha Latte,抹茶拿鐵,non-coffee,130,15,1,1
+202,Hot Chocolate,熱可可,non-coffee,110,15,1,1
+203,Earl Grey Tea,伯爵紅茶,non-coffee,90,15,0,1
+204,Lemon Soda,檸檬氣泡飲,non-coffee,100,0,0,1
+301,Basque Cheesecake,巴斯克乳酪蛋糕,dessert,120,0,0,1
+302,Tiramisu,提拉米蘇,dessert,130,0,0,1
+303,Lemon Tart,檸檬塔,dessert,110,0,0,0
+304,Scone,司康,dessert,70,0,0,1
+305,Butter Croissant,奶油可頌,dessert,65,0,0,1
+401,Ham and Cheese Panini,火腿起司帕尼尼,meal,150,0,0,1
+402,Chicken Caesar Salad,雞肉凱薩沙拉,meal,180,0,0,1
+403,Pesto Pasta,青醬義大利麵,meal,220,0,0,1
+501,House Blend Beans 200g,招牌綜合咖啡豆200g,beans,380,0,0,1
+502,Ethiopia Beans 200g,衣索比亞咖啡豆200g,beans,450,0,0,0

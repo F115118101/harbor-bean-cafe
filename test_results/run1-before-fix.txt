@@ -1,0 +1,27 @@
+Run 1 (before the fixes) - summary of the console output
+
+ 1. PASS  What time do you open on Sunday?                       get_cafe_info
+ 2. PASS  有插座可以讀書嗎？                                      get_cafe_info
+ 3. PASS  Is there a time limit on weekends?                     get_cafe_info
+ 4. PASS  How much is an iced latte?                             get_item  (NT$110, Large NT$125)
+ 5. PASS  檸檬塔今天有嗎？                                        search_menu (sold out)
+ 6. PASS  What desserts do you have?                             search_menu
+ 7. PASS  Two large lattes with oat milk and a tiramisu, own cups calculate_order (NT$400)
+ 8. FAIL  我是會員，一杯美式咖啡和一個司康，總共多少？              get_item -> get_item -> calculate_order
+ 9. FAIL  讀書會 5 個人，每人一杯美式和一個司康                      get_item -> get_item -> calculate_order
+10. PASS  Do you sell bubble tea?                                search_menu (no)
+11. PASS* Which farm do your Ethiopia beans come from?           search_menu, said "no information" but did NOT transfer to a human
+12. FAIL  你們老闆叫什麼名字？                                    no tool, did NOT transfer to a human
+13. PASS  Complaint, wants the manager                           transfer_to_human
+14. PASS  Calculus homework                                      no tool, refused politely
+15. PASS  明天高雄會下雨嗎？                                      no tool, refused politely
+
+Tool selection accuracy: 12/15 = 80%
+(* with the stricter rule of run 2, test 11 would also fail: 11/15 = 73%)
+
+Fixes made after run 1:
+- calculate_order description: "Call it directly with the item names: it looks up the prices itself,
+  so do not call get_item first."  (tests 8, 9)
+- System prompt grounding rule 2: if no tool has the answer to a café question, say so AND call
+  transfer_to_human.  (tests 11, 12)
+- The test now also checks that transfer_to_human is used for questions the data does not cover.
