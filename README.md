@@ -6,7 +6,7 @@ the menu, the price of their order with discounts, and table bookings, in Englis
 Every answer comes from a SQLite database through tools, not from the model's memory.
 
 > Course homework: Unit G, My AI Customer Service Agent, with a Database and Tools
-> Student: [Student ID] [Your Name]
+> Student: F115118101 李郅陞
 
 ![Main screen of the agent, with the tool trace](images/screenshot-main.png)
 
@@ -117,8 +117,8 @@ harbor-bean-cafe/
 1. Download the project:
 
    ```bash
-   git clone https://github.com/[your-account]/[your-repo].git
-   cd [your-repo]
+   git clone https://github.com/F115118101/harbor-bean-cafe.git
+   cd harbor-bean-cafe
    ```
 
 2. Install the packages (Python 3.10 or newer):
