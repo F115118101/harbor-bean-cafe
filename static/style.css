@@ -136,7 +136,7 @@ button.ghost { background: transparent; color: var(--accent); }
 
 .trace-col h2 { margin: 0; font-size: 16px; }
 .hint { margin: 4px 0 10px; color: var(--muted); font-size: 13px; }
-.trace { max-height: 78vh; overflow-y: auto; }
+.trace { overflow-wrap: anywhere; }
 .empty { color: var(--muted); }
 .call {
   border: 1px solid var(--line);
@@ -156,8 +156,6 @@ pre {
   font: 12px/1.45 ui-monospace, Consolas, monospace;
   white-space: pre-wrap;
   overflow-wrap: anywhere;
-  max-height: 220px;
-  overflow-y: auto;
 }
 .bad .call-name { color: var(--warn); }
 

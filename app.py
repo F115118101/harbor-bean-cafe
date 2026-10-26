@@ -17,7 +17,7 @@ import os
 import re
 import sqlite3
 import threading
-from datetime import date, datetime
+from datetime import date, datetime, timedelta
 from pathlib import Path
 
 import uvicorn
@@ -309,7 +309,8 @@ def reserve_table(name, phone, date_text, time_text, people, confirmed=False):
         return {"saved": False, "problems": problems, "note": "Ask the customer to fix these details."}
 
     booking = (name.strip(), phone.strip(), date_text.strip(), time_text.strip(), people)
-    summary = {"name": booking[0], "phone": booking[1], "date": booking[2], "time": booking[3], "people": people}
+    summary = {"name": booking[0], "phone": booking[1], "date": booking[2], "weekday": day.strftime("%A"),
+               "time": booking[3], "people": people}
     if not confirmed or booking not in pending_bookings:
         # Our code, not the model, makes sure the customer saw the summary before anything is written.
         pending_bookings.add(booking)
@@ -460,9 +461,13 @@ def language_note(text):
 
 
 def today_note():
-    """The model does not know today's date, but bookings need it."""
+    """The model does not know today's date, and it counts days wrongly ("this Saturday" became a Sunday
+    in testing). So the program writes out the next seven days for it."""
     today = date.today()
-    return {"role": "system", "content": f"Today is {today.isoformat()} ({today.strftime('%A')})."}
+    week = ", ".join(f"{(today + timedelta(days=n)).strftime('%A')} = {(today + timedelta(days=n)).isoformat()}"
+                     for n in range(1, 8))
+    return {"role": "system", "content": f"Today is {today.isoformat()} ({today.strftime('%A')}). "
+                                         f"The next seven days: {week}. Use these dates; do not count days yourself."}
 
 
 def run_agent(chat_history):

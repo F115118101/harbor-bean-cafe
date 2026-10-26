@@ -76,7 +76,11 @@ that the agent picks an acceptable tool.
 | 1 | 12/15 (80%) | The model called `get_item` before `calculate_order`, and did not hand "owner's name" / "bean farm" questions to a human. |
 | 2 | 15/15 (100%) | `calculate_order` description: "it looks up the prices itself, so do not call get_item first". Grounding rule: if no tool has the answer, say so and call `transfer_to_human`. |
 
+| 3 | 15/15 (100%) | After a booking test saved "this Saturday" as a Sunday, the program now gives the model the dates of the next seven days, and the booking summary shows the weekday. The test was run again to check nothing else broke. |
+
 The outputs are in `test_results/`.
+
+![Output of the tool selection test](images/test-output.png)
 
 ## Sample Conversations
 
@@ -85,6 +89,8 @@ The outputs are in `test_results/`.
 ![A question the data does not cover](images/screenshot-2.png)
 
 ![A table booking, confirmed before it is saved](images/screenshot-3.png)
+
+![The conversation continues: the agent remembers the booking](images/screenshot-3b.png)
 
 ## Project Files
 

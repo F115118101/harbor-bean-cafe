@@ -76,7 +76,13 @@ let busy = false;
 function addBubble(role, text, extraClass = "") {
   const div = document.createElement("div");
   div.className = `msg ${role} ${extraClass}`.trim();
-  div.textContent = text;
+  // Models sometimes write **bold**: show it as bold. Each part is set as text, never as HTML.
+  text.split("**").forEach((part, i) => {
+    if (!part) return;
+    const node = i % 2 ? document.createElement("strong") : document.createTextNode(part);
+    if (i % 2) node.textContent = part;
+    div.appendChild(node);
+  });
   chatBox.appendChild(div);
   chatBox.scrollTop = chatBox.scrollHeight;
   return div;
