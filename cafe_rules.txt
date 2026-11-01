@@ -1,0 +1,79 @@
+# Harbor Bean Café (港豆咖啡) - House Rules
+# Made-up rules for a class project. Harbor Bean Café is not a real shop.
+# Opening hours, address, phone, Wi-Fi, time limit, minimum order, discounts, pets, parking and delivery
+# are short facts in cafe_info.csv (the get_cafe_info tool), not in this file.
+# Each "## " heading starts one chunk for the RAG search.
+
+## Booking changes, late arrival and no-shows
+A booked table is kept for 15 minutes after the booked time. After that it may be given to other guests.
+You can change or cancel a booking free of charge by calling 07-765-4321 until 2 hours before the booked time.
+The chat can make new bookings, but it cannot change or cancel them: please call the café.
+If a booking for 5 or more people does not arrive and does not call, that phone number can only book by phone for the next 30 days.
+We do not take a deposit for table bookings.
+
+## The study room (back room)
+The study room at the back seats up to 10 people and has a whiteboard, a TV screen with HDMI, and power outlets at every seat.
+It can be booked only by phone, at least 1 day in advance, in blocks of 2 hours.
+The room fee is NT$300 for 2 hours, and every person in the room still orders at least one item (the normal minimum order).
+Students with a valid NKUST student card pay NT$200 for the room on weekdays.
+Please keep your voice down when the door is open, and leave the room clean when you go.
+
+## Allergens and special diets
+Our kitchen uses milk, eggs, wheat (gluten), nuts, soy and sesame every day.
+The Pesto Pasta contains pine nuts and cheese. The Basque Cheesecake and the Tiramisu contain milk and eggs, and the Tiramisu contains alcohol (coffee liqueur).
+The Scone and the Butter Croissant contain wheat, milk and butter.
+Oat milk is our only plant milk; we do not have soy milk or almond milk. Oat milk is made in a factory that also handles gluten.
+We cannot promise that any item is completely free of an allergen. Guests with a serious allergy should tell the staff before ordering.
+We have no fully vegan meal. The Lemon Soda, the Earl Grey Tea, the Americano and the Cold Brew contain no animal products.
+
+## Caffeine, decaf and children
+We do not serve decaf coffee at the moment.
+For guests who want no caffeine, we suggest the Lemon Soda or the Hot Chocolate. The Earl Grey Tea and the Matcha Latte contain caffeine.
+A Regular hand-drip or Cold Brew has more caffeine than an Americano. Pregnant guests may ask the staff for advice.
+Children are welcome. We have two high chairs; please ask at the counter.
+
+## Wrong drinks, refunds and complaints
+If your drink or food is wrong, or not hot or cold as ordered, tell the staff within 15 minutes and we will make it again free of charge.
+We do not give money back for items that have already been eaten or drunk more than half.
+If you paid by card, LINE Pay or JKOPAY and the amount was wrong, the money goes back the same way within 7 working days.
+Complaints can be made to the staff, by phone, or by email to hello@harborbean.example within 7 days of the visit. We answer within 3 working days.
+
+## Lost and found
+Items left in the café are kept for 14 days.
+Phones, wallets, keys and student cards are kept in the office and need photo ID, or a description of the item, to collect.
+Umbrellas, cups and clothes are kept in the box by the door.
+Food, drinks and opened packages are thrown away at closing time.
+After 14 days, items that nobody collects are given to the NKUST lost-and-found office or a charity.
+
+## Outside food, drinks and birthday cakes
+Outside food and drinks are not allowed, except baby food and water.
+You may bring your own birthday cake. The cake fee is NT$50 per cake, and we lend plates, forks and a knife.
+Candles are fine; sparklers and party poppers are not allowed indoors.
+
+## Laptops, phone calls and noise
+Laptops are welcome. The long bar table and the window seats have power outlets.
+On Saturday and Sunday the 2-hour table limit also applies to laptop users. When the café is full, staff may ask guests who have finished to share a table.
+Please take long phone calls and video meetings outside, or use headphones and keep your voice low.
+Do not move tables or chairs between the window seats and the main room.
+
+## Takeaway pre-orders by phone
+You can order takeaway by phone (07-765-4321) during staff phone hours. Drinks are ready in about 10 minutes, food in about 20 minutes.
+A pre-order is kept at the counter for 30 minutes after the ready time. Drinks made more than 30 minutes ago are not made again for free.
+Pre-orders of more than 10 drinks need 1 hour's notice.
+Takeaway cups and bags are free. Bring your own cup to get the own-cup discount, also for takeaway.
+
+## Coffee beans: grinding, freshness and returns
+We grind beans for free when you buy them: tell the staff your brewing method (hand-drip, espresso, French press, moka pot).
+All beans are roasted in our shop every Wednesday, and the roast date is on the bag. Beans are best within 30 days of roasting.
+Keep beans in the closed bag, away from sunlight, and not in the fridge.
+Unopened bags can be returned within 7 days with the receipt. Opened or ground beans cannot be returned.
+
+## Gift vouchers
+We sell paper gift vouchers of NT$300 and NT$500 at the counter.
+A gift voucher is valid for 12 months from the date printed on it. It cannot be exchanged for cash, and no change is given.
+A lost voucher cannot be replaced. Vouchers can be used together with the member discount and the own-cup discount.
+
+## Typhoons and special closing days
+When the Kaohsiung City Government announces that work and classes are cancelled because of a typhoon, the café is closed for that day.
+Bookings on that day are cancelled automatically, with no penalty.
+We also close for the Lunar New Year eve and the first two days of the Lunar New Year. Other closing days are posted on our Instagram one week before.

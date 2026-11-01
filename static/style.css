@@ -158,6 +158,8 @@ pre {
   overflow-wrap: anywhere;
 }
 .bad .call-name { color: var(--warn); }
+.hits { margin: 2px 0 0; padding-left: 18px; font-size: 13px; }
+.hits li { margin: 1px 0; }
 
 @media (max-width: 860px) {
   .layout { grid-template-columns: 1fr; padding: 12px 16px; }
